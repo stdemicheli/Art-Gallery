@@ -23,24 +23,40 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="288" id="ccd-za-I6I">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="288"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="318" id="ccd-za-I6I" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="318"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ccd-za-I6I" id="cZ0-Op-7RJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="287.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="317.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asi-Lh-DoK">
-                                                    <rect key="frame" x="15" y="11" width="345" height="233"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-kQ-7qK">
+                                                    <rect key="frame" x="15" y="11" width="345" height="251"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOQ-vt-FaR">
-                                                    <rect key="frame" x="172" y="252" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-fk-Whd">
+                                                    <rect key="frame" x="172.5" y="277" width="30" height="30"/>
                                                     <state key="normal" title="Like"/>
+                                                    <connections>
+                                                        <action selector="like:" destination="ccd-za-I6I" eventType="touchUpInside" id="lzk-a6-51V"/>
+                                                        <action selector="toggleLike:" destination="ccd-za-I6I" eventType="touchUpInside" id="f4l-bE-sfS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pb2-fk-Whd" firstAttribute="top" secondItem="M9F-kQ-7qK" secondAttribute="bottom" constant="15" id="BoJ-oN-RRJ"/>
+                                                <constraint firstItem="Pb2-fk-Whd" firstAttribute="centerX" secondItem="cZ0-Op-7RJ" secondAttribute="centerX" id="Gtx-8I-OKN"/>
+                                                <constraint firstItem="Pb2-fk-Whd" firstAttribute="bottom" secondItem="cZ0-Op-7RJ" secondAttribute="bottomMargin" id="KK9-wU-avt"/>
+                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="leading" secondItem="cZ0-Op-7RJ" secondAttribute="leadingMargin" constant="-1" id="KsP-EO-2QR"/>
+                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="centerX" secondItem="Pb2-fk-Whd" secondAttribute="centerX" id="UeR-c1-o8S"/>
+                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="top" secondItem="cZ0-Op-7RJ" secondAttribute="topMargin" constant="-20" id="qcZ-YP-CTN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonText" destination="Pb2-fk-Whd" id="fpn-gQ-0ml"/>
+                                            <outlet property="imageView" destination="M9F-kQ-7qK" id="3IS-pN-a17"/>
+                                            <outlet property="imageViews" destination="M9F-kQ-7qK" id="8JC-dS-aPg"/>
+                                            <outlet property="likeButton" destination="Pb2-fk-Whd" id="zNZ-zB-R2v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
