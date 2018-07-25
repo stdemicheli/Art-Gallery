@@ -17,9 +17,10 @@ class PaintingTableViewCell: UITableViewCell {
     func updateViews() {
         guard let painting = painting else { return }
         imageViews.image = painting.image
+        
         buttonText.currentTitle == "Like"
-            ? buttonText.setTitle("Unlike", for: [])
-            : buttonText.setTitle("Like", for: [])
+            ? buttonText.setTitle("Unlike", for: .normal)
+            : buttonText.setTitle("Like", for: .normal)
     }
 
     @IBAction func toggleLike(_ sender: Any) {
