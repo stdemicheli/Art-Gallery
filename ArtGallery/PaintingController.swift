@@ -14,8 +14,8 @@ class PaintingController {
     func loadPaintingsFromAssets() {
         for index in 1...12 {
             let name = "Image\(index)"
-            guard let file = UIImage(named: name) else { return }
-            let painting = Painting(image: file)
+            guard let asset = UIImage(named: name) else { return }
+            let painting = Painting(image: asset)
             paintings.append(painting)
         }
     }

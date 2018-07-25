@@ -8,12 +8,16 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource {
+class PaintingListViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
+    }
+    
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        <#code#>
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

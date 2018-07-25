@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D10FD952109077F00415E99 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10FD942109077F00415E99 /* Painting.swift */; };
 		3D10FD99210914E000415E99 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10FD98210914E000415E99 /* PaintingController.swift */; };
+		3D10FD9D2109199100415E99 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10FD9C2109199100415E99 /* PaintingTableViewCell.swift */; };
+		3D10FD9F21091DC700415E99 /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10FD9E21091DC700415E99 /* PaintingListViewController.swift */; };
 		469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469AAC41210258C200C0D421 /* AppDelegate.swift */; };
 		469AAC47210258C200C0D421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC45210258C200C0D421 /* Main.storyboard */; };
 		469AAC49210258C300C0D421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469AAC48210258C300C0D421 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		3D10FD942109077F00415E99 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		3D10FD98210914E000415E99 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		3D10FD9C2109199100415E99 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		3D10FD9E21091DC700415E99 /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 		469AAC3E210258C200C0D421 /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469AAC41210258C200C0D421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469AAC46210258C200C0D421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
-				469AAC45210258C200C0D421 /* Main.storyboard */,
+				3D10FD9E21091DC700415E99 /* PaintingListViewController.swift */,
+				3D10FD9C2109199100415E99 /* PaintingTableViewCell.swift */,
 				3D10FD98210914E000415E99 /* PaintingController.swift */,
 				3D10FD942109077F00415E99 /* Painting.swift */,
+				469AAC45210258C200C0D421 /* Main.storyboard */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D10FD9F21091DC700415E99 /* PaintingListViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 				3D10FD99210914E000415E99 /* PaintingController.swift in Sources */,
 				3D10FD952109077F00415E99 /* Painting.swift in Sources */,
+				3D10FD9D2109199100415E99 /* PaintingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
