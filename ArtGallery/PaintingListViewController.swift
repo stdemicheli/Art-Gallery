@@ -21,7 +21,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         guard let index = tableView.indexPath(for: cell) else { return }
         let painting = paintingController.paintings[index.row]
         paintingController.toggleIsLiked(for: painting)
-        tableView.reloadRows(at: [index], with: .fade)
+        tableView.reloadRows(at: [index], with: .none)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +39,9 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return paintingController.paintings[indexPath.row].image.size.height + 100
+    }
     
     // MARK: - Properties
     
