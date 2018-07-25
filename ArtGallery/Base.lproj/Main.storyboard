@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qXw-GV-TES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qXw-GV-TES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,14 +14,13 @@
         <!--Art Gallery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IH9-Pa-jlo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IH9-Pa-jlo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaintingCell" rowHeight="318" id="ccd-za-I6I" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
@@ -30,11 +30,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="317.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-kQ-7qK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-kQ-7qK">
                                                     <rect key="frame" x="15" y="11" width="345" height="251"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-fk-Whd">
-                                                    <rect key="frame" x="172.5" y="277" width="30" height="30"/>
+                                                    <rect key="frame" x="173" y="277" width="30" height="30"/>
                                                     <state key="normal" title="Like"/>
                                                     <connections>
                                                         <action selector="like:" destination="ccd-za-I6I" eventType="touchUpInside" id="lzk-a6-51V"/>
@@ -46,9 +46,9 @@
                                                 <constraint firstItem="Pb2-fk-Whd" firstAttribute="top" secondItem="M9F-kQ-7qK" secondAttribute="bottom" constant="15" id="BoJ-oN-RRJ"/>
                                                 <constraint firstItem="Pb2-fk-Whd" firstAttribute="centerX" secondItem="cZ0-Op-7RJ" secondAttribute="centerX" id="Gtx-8I-OKN"/>
                                                 <constraint firstItem="Pb2-fk-Whd" firstAttribute="bottom" secondItem="cZ0-Op-7RJ" secondAttribute="bottomMargin" id="KK9-wU-avt"/>
-                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="leading" secondItem="cZ0-Op-7RJ" secondAttribute="leadingMargin" constant="-1" id="KsP-EO-2QR"/>
+                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="leading" secondItem="cZ0-Op-7RJ" secondAttribute="leadingMargin" id="KsP-EO-2QR"/>
                                                 <constraint firstItem="M9F-kQ-7qK" firstAttribute="centerX" secondItem="Pb2-fk-Whd" secondAttribute="centerX" id="UeR-c1-o8S"/>
-                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="top" secondItem="cZ0-Op-7RJ" secondAttribute="topMargin" constant="-20" id="qcZ-YP-CTN"/>
+                                                <constraint firstItem="M9F-kQ-7qK" firstAttribute="top" secondItem="cZ0-Op-7RJ" secondAttribute="topMargin" id="qcZ-YP-CTN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -62,9 +62,18 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IH9-Pa-jlo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Khf-qF-5Pp"/>
+                            <constraint firstItem="IH9-Pa-jlo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RBL-km-rfk"/>
+                            <constraint firstAttribute="trailing" secondItem="IH9-Pa-jlo" secondAttribute="trailing" id="Ru4-gY-7tH"/>
+                            <constraint firstItem="IH9-Pa-jlo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v6v-PW-E68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="8xt-3d-Mfu"/>
+                    <connections>
+                        <outlet property="tableView" destination="IH9-Pa-jlo" id="zE0-7A-nSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
