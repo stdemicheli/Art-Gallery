@@ -18,7 +18,10 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-        return
+        guard let index = tableView.indexPath(for: cell) else { return }
+        let painting = paintingController.paintings[index.row]
+        paintingController.toggleIsLiked(for: painting)
+        tableView.reloadRows(at: [index], with: .fade)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
